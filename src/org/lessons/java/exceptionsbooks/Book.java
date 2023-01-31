@@ -22,11 +22,11 @@ class Book {
 	private String author;
 	private String publisher;
 
-	public Book(String title, int pages, String author, String publisher) {
-		this.title = title;
-		this.pages = pages;
-		this.author = author;
-		this.publisher = publisher;
+	public Book(String title, int pages, String author, String publisher) throws Exception {
+		this.setTitle(title);
+		this.setPages(pages);
+		this.setAuthor(author);
+		this.setPublisher(publisher);
 	}
 
 	@Override
