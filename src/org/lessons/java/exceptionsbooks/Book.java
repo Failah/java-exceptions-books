@@ -29,6 +29,12 @@ class Book {
 		this.publisher = publisher;
 	}
 
+	@Override
+	public String toString() {
+		return "Title: " + title + "\n" + "Pages: " + pages + "\n" + "Author: " + author + "\n" + "Publisher: "
+				+ publisher;
+	}
+
 	public String getTitle() {
 		return title;
 	}

@@ -39,6 +39,9 @@ public class Main {
 			String publisher = s.nextLine();
 
 			try {
+
+				books[i] = new Book(title, pages, author, publisher);
+
 				if (title.isEmpty()) {
 					throw new Exception("Title cannot be empty!");
 				}
@@ -52,7 +55,6 @@ public class Main {
 					throw new Exception("Publisher cannot be empty!");
 				}
 
-				books[i] = new Book(title, pages, author, publisher);
 			} catch (Exception e) {
 				System.out.println("There is an Error in your input: " + e.getMessage());
 				i--;
@@ -62,10 +64,7 @@ public class Main {
 		System.out.println("\nHere is your books catalog:");
 		for (int i = 0; i < n; i++) {
 			System.out.println("Book #" + (i + 1) + ":");
-			System.out.println("Title: " + books[i].getTitle());
-			System.out.println("Pages: " + books[i].getPages());
-			System.out.println("Author: " + books[i].getAuthor());
-			System.out.println("Publisher: " + books[i].getPublisher());
+			System.out.println(books[i].toString());
 			System.out.println(" ");
 		}
 
